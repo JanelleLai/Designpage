@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="EN-CA">
+  <head>
+    <title>Final website - About</title>
+    <!--'created by Janelle on 12/6'-->
+    
+<style>
+  
+      @font-face {
+       font-family: 'Cursive';
+       src: url('Cursive.ttf');
+      }
+        
+      .main-container {
+       width: 100%;
+       max-width: 1440px;
+       margin: 0 auto;
+       background-color: white;
+       position: relative;
+      }
+        
+      .content {
+       width: 1200px;
+        height: 1200px; /*delete after*/
+       margin: 120px auto; 
+       z-index: 0;
+       background: linear-gradient(180deg, #D4E9FF,#AAD3FF);
+       border-radius: 30px;
+       position: relative;
+       display: flex;
+       flex-direction: column;
+       color: white;
+       border-style: solid;
+       border-color: grey;
+      }
+  
+      .top-nav {
+          width: 557px;
+          height: 70px; 
+          background: rgba(255, 255, 255, 0.7);
+          border-radius: 14px; 
+        
+          position: absolute;
+          top: 30px; 
+          left: 50%; 
+          transform: translateX(-50%);
+    
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 65px;
+        
+          font-family: 'Hoefler Text', Georgia, serif;
+          font-style: italic;
+          font-size: 25px;
+          
+          box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1);
+        }
+
+      .top-nav a {
+          text-decoration: none;
+          color: #333; /* dark text */
+          transition: color 0.3s;
+        }
+
+       .top-nav a:hover {
+        color: #3498db; /* change on hover */
+       }
+
+  .info-container {
+  position: absolute;   /* allows floating placement */
+}
+
+.file-button {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        position: absolute;
+        width: 150px;
+       }
+
+      .file-button img {
+        width: 150px;
+        height: auto;
+        
+      }
+  
+      .file1 {
+        top: 130px;    
+        left: 150px;
+       }
+
+/* pop up box after clicked */
+.info-box {
+  display: none;
+  margin-top: 100px;      /* space below button */
+  background: white;
+  color: grey;
+  padding: 15px;
+  border-radius: 12px;
+  width: 600px;
+  height: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  font-family: 'Hoefler Text', Georgia, serif;
+}
+
+/* images inside info box */
+.info-img {
+  width: auto;
+  
+  margin-top: 10px;
+}
+  
+    </style>
+  </head>
+  <body>
+     <div class="main-container">
+         <div class="content">
+           
+             <nav  class="top-nav">
+            <a href="https://janellelai.github.io/Final-website/">Home</a>
+            <a href="https://janellelai.github.io/Aboutpage/">About</a>
+            <a href="#">Design</a>
+            <a href="#">Contact</a>
+              </nav>
+           
+           <div class="info-container file1">
+  <button class="file-button" onclick="toggleInfo(this)">
+    <img src="file1.png" alt="melon soda file folder icon with ice-cream on top">
+  </button>
+  <div class="info-box">
+    <h3>Title Here</h3>
+    <p>This text box appears BELOW the image button.</p>
+    <img src="example-img.png" class="info-img" alt="example">
+  </div>
+             
+             
+             
+</div>
+         
+           <script>
+function toggleInfo(button) {
+  const box = button.nextElementSibling;
+
+  if (box.style.display === "block") {
+    box.style.display = "none";
+  } else {
+    box.style.display = "block";
+  }
+}
+</script>
+           
+       </div>
+    </div>
+  </body>
+</html>
