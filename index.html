@@ -5,19 +5,18 @@
     <!--'created by Janelle on 12/6'-->
     
 <style>
-  
       @font-face {
        font-family: 'Cursive';
        src: url('Cursive.ttf');
       }
         
       body {
-        background: linear-gradient(180deg, #AAD3FF, white);
+       background: linear-gradient(180deg, #AAD3FF, white);
       }
         
       .content {
        width: 1200px;
-        height: 1000px; /*delete after*/
+       height: 1000px;
        margin: 120px auto; 
        z-index: 0;
        background: linear-gradient(180deg, #D4E9FF,#AAD3FF);
@@ -31,64 +30,63 @@
       }
   
       .top-nav {
-          width: 557px;
-          height: 70px; 
-          background: rgba(255, 255, 255, 0.7);
-          border-radius: 14px; 
+       width: 557px;
+       height: 70px; 
+       background: rgba(255, 255, 255, 0.7);
+       border-radius: 14px; 
         
-          position: absolute;
-          top: 30px; 
-          left: 50%; 
-          transform: translateX(-50%);
+       position: absolute;
+       top: 30px; 
+       left: 50%; 
+       transform: translateX(-50%); /* GenAI used to fix positioning */
     
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 65px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       gap: 65px;
         
-          font-family: 'Hoefler Text', Georgia, serif;
-          font-style: italic;
-          font-size: 25px;
-          
-          box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1);
-        }
+       font-family: 'Hoefler Text', Georgia, serif;
+       font-style: italic;
+       font-size: 25px;
+       box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1);
+      }
 
       .top-nav a {
-        text-decoration: none;
-        color: #333; /* dark text */
-        transition: color 0.3s;
+       text-decoration: none;
+       color: black; 
+       transition: color 0.3s;
       }
 
       .top-nav a:hover {
-        color: #3498db; /* change on hover */
+       color: #3498DB; 
       }
 
       .info-container {
-       position: absolute;   /* allows floating placement */
+       position: absolute; 
       }
 
       .file-button {
-        background: none;
-        border: none;
-        padding: 0;
-        cursor: pointer;
-        position: absolute;
-        width: 150px;
-       }
+       background: none;
+       border: none;
+       padding: 0;
+       cursor: pointer;
+       position: absolute;
+       width: 150px;
+      }
 
       .file-button img {
-        width: 180px;
-        height: auto;
+       width: 180px;
+       height: auto;
       }
   
       .file-button img:hover {
-        transition-duration: 1s;
-        box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+       transition-duration: 1s;
+       box-shadow: 0 0 10px rgba(255, 255, 255, 1);
       }
   
       .file1 {    /*melon soda*/
-        top: 180px;    
-        left: 120px;
+       top: 180px;    
+       left: 120px;
       }
   
       .file2 {    /*cake*/
@@ -105,130 +103,129 @@
        bottom: 400px;
        right: 350px;
       }
+  
+      /* pop up box after clicked */
+      .info-box {
+       display: none;
+       position: absolute;
+       background: white;
+       color: grey;
+       padding: 15px;
+       border-radius: 12px;
+       width: auto;
+       height: auto;
+       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+       font-family: 'Hoefler Text', Georgia, serif;
+       z-index: 2;
+       line-height: 5px;
+      }
+  
+      .poster-box {
+       top: 200px;  
+       left: 5px;
+       width: 900px;
+      }
+  
+      .icons-box {
+       top: 150px;
+       right: -175px;
+       width: 850px;
+      }
+  
+      .logo-box {
+       bottom: 2px;   
+       left: 390px;   
+       transform: translateX(-50%);
+       width: 750px;
+      }
+  
+      .magazine-box {
+       bottom: 100%;   
+       left: -270px;   
+       transform: translateX(-50%);
+       width: 850px;
+      }
 
-/* pop up box after clicked */
-.info-box {
-  display: none;
-  position: absolute;
-  background: white;
-  color: grey;
-  padding: 15px;
-  border-radius: 12px;
-  width: auto;
-  height: auto;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  font-family: 'Hoefler Text', Georgia, serif;
-  z-index: 2;
-  line-height: 5px;
-}
+      /* images inside info box */
+      .info-img {
+       width: 200px;
+       margin: 10px;
+       border-radius: 5px;
+      }
   
-    .poster-box {
-     top: 200px;   /* how far below the button */
-     left: 5px;
-     width: 900px;
-    }
+      .icons-img {
+       width: 700px;
+      }
   
-    .icons-box {
-     top: 150px;
-     right: -175px;
-     width: 850px;
-    }
+      .logo-img {
+       width: 300px;
+      }
   
-    .logo-box {
-     bottom: 2px;   /* above the button */
-     left: 390px;   /* center above button */
-     transform: translateX(-50%);
-      width: 750px;
-    }
+      .magazine-img {
+       width: 400px;
+      }
   
-    .magazine-box {
-     bottom: 100%;    /* above the button */
-     left: -270px;    /* center above button */
-     transform: translateX(-50%);
-     width: 850px;
-    }
-
-/* images inside info box */
-.info-img {
-  width: 200px;
-  margin: 10px;
-  border-radius: 5px;
-}
+      .content div.text {
+       font-family: 'Cursive';
+       text-shadow: 0 0 3px rgba(255, 255, 255, 1);
+       font-size: 50px;
+       color: black;
+       z-index: 1;
+      }
   
-  .icons-img {
-    width: 700px;
-  }
+     .p1 {
+      position: absolute; /* poster text */
+      top: 260px;
+      left: 230px;
+     }
   
-  .logo-img {
-    width: 300px;
-  }
+     .p2 {
+      position: absolute; /* icons text */
+      top: 335px;
+      right: 230px;
+     }
   
-  .magazine-img {
-    width: 400px;
-  }
+     .p3 {
+      position: absolute; /* logo text */
+      bottom: 240px;
+      left: 400px;
+     }
   
-  .content div.text {
-          font-family: 'Cursive';
-          text-shadow: 0 0 3px rgba(255, 255, 255, 1);
-          font-size: 50px;
-          color: black;
-          z-index: 1;
-        }
+     .p4 {
+      position: absolute; /* magazine text */
+      bottom: 160px;
+      right: 80px;
+     }
   
-       .p1 {
-          position: absolute; /* poster */
-          top: 260px;
-          left: 230px;
-        }
+     footer {
+      margin-top: auto;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 30px;
+      color: grey;
+      font-family: 'InaiMathi', serif;
+      padding-top: 50px;
+      border-radius: 30px;
+     }
   
-       .p2 {
-          position: absolute; /* icons */
-          top: 335px;
-          right: 230px;
-        }
+     footer .right {
+      text-align: right;
+     }
   
-       .p3 {
-          position: absolute; /* logo */
-          bottom: 240px;
-          left: 400px;
-        }
-  
-       .p4 {
-          position: absolute; /* magazine */
-          bottom: 160px;
-          right: 80px;
-        }
-  
-        footer {
-          margin-top: auto;
-          background: rgba(255, 255, 255, 0.8);
-          padding: 30px;
-          color: grey;
-          font-family: 'InaiMathi', serif;
-          padding-top: 50px;
-          border-radius: 30px;
-        }
-  
-        footer .right {
-          text-align: right;
-        }
-  
-        .floating-graphic {
-          position: absolute;
-          width: 150px;
-        }
+     .floating-graphic {
+      position: absolute;
+      width: 150px;
+     }
     
-        .g2 {
-          top: 100px;
-          right: 350px;
-          width: 60px;
-        }
+    .g2 {
+     top: 100px;
+     right: 350px;
+     width: 60px;
+    }
   
     </style>
   </head>
-  <body>
-     
-         <div class="content">
+<body>
+    <div class="content">
            
              <nav  class="top-nav">
             <a href="https://janellelai.github.io/Final-website/">Home</a>
@@ -285,18 +282,19 @@
          <p>As you can see, it reflects the pink girl-pop style that I used to be really into.</p>
        </div>         
       </div>
-         
-<script>
-function toggleInfo(button) {
-  const box = button.nextElementSibling;
+        
+      <!-- GenAI used to fix Java script -->
+      <script>
+      function toggleInfo(button) {
+      const box = button.nextElementSibling;
 
-  if (box.style.display === "block") {
-    box.style.display = "none";
-  } else {
-    box.style.display = "block";
-  }
-}
-</script>
+      if (box.style.display === "block") {
+      box.style.display = "none";
+      } else {
+        box.style.display = "block";
+        }
+      }
+      </script>
            
            <div class="text">
              <p class="p1">poster</p>
@@ -308,6 +306,5 @@ function toggleInfo(button) {
          <footer>  DESIGNED &amp; BUILT WITH <br> FIGMA &amp; NETNET STUDIO <div class="right"><a href="https://youtu.be/SVkGRoLicuA?si=4Jq4r4ODuFLYXLRW" target="_blank">🎵 BGM</a></div> 
         </footer>
     </div>
-    
   </body>
 </html>
